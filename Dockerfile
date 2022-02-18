@@ -23,4 +23,4 @@ COPY --from=builder /go/bin/{{ cookiecutter.project_binary }} /go/bin/{{ cookiec
 
 ENTRYPOINT ["/go/bin/{{ cookiecutter.project_binary }}"]
 
-EXPOSE 8080
+EXPOSE {{ cookiecutter.project_port }}

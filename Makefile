@@ -5,7 +5,7 @@
 
 {{ cookiecutter.project_repo }}-run:
 	@echo "Running Single {{ cookiecutter.project_repo }} Docker Container"
-	docker run -p 8080:8080 -d {{ cookiecutter.project_binary }}
+	docker run -p {{ cookiecutter.project_port }}:{{ cookiecutter.project_port }} -d {{ cookiecutter.project_binary }}
 
 provision:
 	@echo "Provisioning {{ cookiecutter.project_repo }} Cluster"	
