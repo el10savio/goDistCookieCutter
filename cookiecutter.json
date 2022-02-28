@@ -1,6 +1,6 @@
 {
-    project_repo: "app",
-    project_binary: "app",
-    project_slug: "{{ cookiecutter.project_repo }}",
-    project_port: 8080
+    "project_repo": "app",
+    "project_binary": "app",
+    "project_slug": "{{ cookiecutter.project_repo }}",
+    "project_port": 8080
 }
