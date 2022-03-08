@@ -5,7 +5,7 @@ import (
 	"os"
 
 	// Add your repo's handlers
-	"./handlers"
+	"{{ cookiecutter.project_repo }}/handlers"
 
 	log "github.com/sirupsen/logrus"
 )
