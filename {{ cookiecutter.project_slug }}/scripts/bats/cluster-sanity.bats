@@ -6,7 +6,7 @@
 }
 
 @test "Check Replicas Are Available" {
-  ports="$(docker ps | awk '/{{ cookiecutter.project_binary }}/ {print $1}' | xargs -I {} docker port {} 8080 | sed ':a;N;$!ba;s/\n/,/g' | {{ cookiecutter.project_binary }})"
+  ports="$(docker ps | awk '/{{ cookiecutter.project_binary }}/ {print $1}' | xargs -I {} docker port {} 8080 | sed ':a;N;$!ba;s/\n/,/g' | sort)"
 	IFS=', ' read -r -a ports_list <<< "$ports"
 
 	for port in "${ports_list[@]}"; do
